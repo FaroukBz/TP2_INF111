@@ -12,9 +12,12 @@ public class ProgrammePrincipal {
 	 * @param args, pas utilisé
 	 */
 	public static void main(String[] args){
+		
+		System.out.println("test");
 	
 		SatelliteRelais satellite = new SatelliteRelais();
-		satellite.start();
+
+
 		
 	}
 
