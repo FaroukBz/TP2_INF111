@@ -12,13 +12,16 @@ public class ProgrammePrincipal {
 	 * @param args, pas utilisé
 	 */
 	public static void main(String[] args){
-		
-		System.out.println("test");
 	
 		SatelliteRelais satellite = new SatelliteRelais();
-
-
+		satellite.getMsgRobot().ajouterElement("a");
+		satellite.getMsgRobot().ajouterElement("b");
+		satellite.getMsgRobot().ajouterElement("c");
+		satellite.start();
+		System.out.println(satellite.getMsgRobot().getNbrElements());
 		
+
+
 	}
 
 }

@@ -120,12 +120,9 @@ public class SatelliteRelais extends Thread{
     public File getMsgRobot () {
     	return this.msgRobot;
     }
-    
-    public void main (String[]args) {
-    	SatelliteRelais satellite = new SatelliteRelais();
-	    System.out.println(satellite.msgControle.estVide());
-		satellite.start();
+    public File getMsgControle () {
+    	return this.msgControle;
     }
-    
+
     
 }
