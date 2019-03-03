@@ -14,8 +14,14 @@ public class ProgrammePrincipal {
 	public static void main(String[] args){
 	
 		SatelliteRelais satellite = new SatelliteRelais();
+		satellite.getMsgRobot().ajouterElement("a");
+		satellite.getMsgRobot().ajouterElement("b");
+		satellite.getMsgRobot().ajouterElement("c");
 		satellite.start();
+		System.out.println(satellite.getMsgRobot().getNbrElements());
 		
+
+
 	}
 
 }
