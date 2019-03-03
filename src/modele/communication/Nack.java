@@ -1,10 +1,18 @@
 package modele.communication;
 
-public class Nack {
+public class Nack extends Message {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public Nack(int compte) {
+		super(compte);
 
 	}
+
+
+	public static void main(String[]args) {
+		Nack n = new Nack(1);
+		n.getCompte();
+		System.out.println(n.getClass());
+	}
+
 
 }

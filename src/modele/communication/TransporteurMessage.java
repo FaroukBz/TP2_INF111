@@ -40,7 +40,9 @@ import java.util.ArrayList;
 import java.util.concurrent.locks.ReentrantLock;
 
 public abstract class TransporteurMessage extends Thread {
-	
+
+	private ArrayList<Object> liste=new ArrayList<Object>();
+
 	// compteur de message
 	protected CompteurMessage compteurMsg;
 	
@@ -61,14 +63,18 @@ public abstract class TransporteurMessage extends Thread {
 	 * @param msg, message reçu
 	 */
 	public void receptionMessageDeSatellite(Message msg) {
-		lock.lock();
 		
+		lock.lock();
+
 		try {
-			
-			/*
-			 * (6.3.3) Insérer votre code ici 
-			 */
-			
+
+			if(msg.getClass().equals("class modele.communication.Nack")){
+				liste.add(0, msg);
+			}
+			else{
+				liste.set(msg.compte(),msg);
+			}
+
 		}finally {
 			lock.unlock();
 		}
@@ -90,9 +96,7 @@ public abstract class TransporteurMessage extends Thread {
 			
 			try {
 
-				/*
-				 * (6.3.4) Insérer votre code ici 
-				 */
+				while()
 			
 			}finally{
 				lock.unlock();
