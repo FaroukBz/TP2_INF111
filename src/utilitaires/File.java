@@ -8,8 +8,7 @@ import java.util.ArrayList;
  * 			
  */
 public class File {
-
-
+		
 	// attributs d'instance	
 	// capacite initiale par defaut
 	private static final int CAPACITE_INITIALE = 10;
@@ -87,6 +86,7 @@ public class File {
 		System.out.println(f.elements.get(0));
 		System.out.println(f.getNbrElements());
 		System.out.println();
+		
 		
 	}
 		
