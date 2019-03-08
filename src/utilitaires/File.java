@@ -1,6 +1,7 @@
 package utilitaires;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 /*
  * 
  * @version : 2019/02/25
@@ -8,7 +9,8 @@ import java.util.ArrayList;
  * 			
  */
 public class File {
-		
+
+
 	// attributs d'instance	
 	// capacite initiale par defaut
 	private static final int CAPACITE_INITIALE = 10;
@@ -75,19 +77,26 @@ public class File {
 	
 	// methode de test
 	public static void main(String[]args) {
-		File f = new File();
-		f.ajouterElement(1);
-		f.ajouterElement(2);
-		f.ajouterElement(3);
-		f.ajouterElement(4);
-		f.ajouterElement(5);
+		File f = new File(10);
 		
-		System.out.println(f.enleverElement());
-		System.out.println(f.elements.get(0));
-		System.out.println(f.getNbrElements());
-		System.out.println();
+		f.ajouterElement(null);
+		f.ajouterElement(null);
+		f.ajouterElement(null);
+		f.ajouterElement(null);		
+		
+		LinkedList<Object> liste  = new LinkedList<Object>();
+		liste.add(null);
+		liste.add(null);
+		System.out.println(liste.size());
 		
 		
+		
+//		System.out.println(f.elements.get(0));
+//		System.out.println(f.getNbrElements());
+//		System.out.println();
+//		File t = new File();
+//		System.out.println(t.enleverElement());
+//		System.out.println(t.getNbrElements());
 	}
 		
 }

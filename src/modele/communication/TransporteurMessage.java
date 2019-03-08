@@ -41,7 +41,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public abstract class TransporteurMessage extends Thread {
 
-	private ArrayList<Object> liste=new ArrayList<Object>();
+	private File file;
 
 	// compteur de message
 	protected CompteurMessage compteurMsg;
@@ -53,7 +53,8 @@ public abstract class TransporteurMessage extends Thread {
 	 * Constructeur, initialise le compteur de messages unique
 	 */
 	public TransporteurMessage() {
-		compteurMsg = new CompteurMessage();		
+		compteurMsg = new CompteurMessage();	
+		file = new File();
 	}
 	
 	/**
